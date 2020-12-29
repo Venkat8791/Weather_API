@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+      </head>
+
+    <body style="background-color: cadetblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4" style="font-weight: 400;color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Weather Telecast</h1>
+                  <p class="lead" style="color: orangered;font-family: 'Courier New', Courier, monospace;">Get Live Weather Updates Accurately From Here</p>
+                </div>
+            </div>
+
+            <div class="container">
+
+              <div class="form-group row d-flex">
+                <div class="col-md-10">
+                   <input type="text" class="form-control" id="CITYNAME" placeholder="Enter a city">
+                </div>
+                <div class="col-md-2">
+                  <button type="button" class="btn btn-secondary" onclick="getLocationWeather()">Search</button>
+               </div>
+              </div>
+
+              <div class="card-body">
+              <div class="row notificationElement">
+                <div class="col-xs-4 col-md-6">
+                  <h3 id="cityElement">-</h3>
+                  <h4 id="countryElement"><span>-</span></h4>
+                </div>
+                <div class="col-xs-2 col-md-3">
+                  <h3 id="degreeElement">- °C</h3>
+                  <h4 id="descriptionElement"><span>-</span></h4>
+                </div>
+                <div class="col-xs-4 col-md-3 iconElement " >
+                  <b>-</b>
+                </div>
+              </div>
+              </div>
+
+              <div class="card">
+
+                <div class="card-header">
+                  Details
+                </div>
+
+                <div class="card-body">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Temperature</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="temperatureElement">- °C</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Pressure</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="pressureElement">- atm</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Humidity</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="humidityElement">- g/m<sup>3</sup> </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Wind-Speed</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="speedElement">- m/s</p>
+                        </div>
+                      </div>
+  
+                    </div>
+  
+                    <div class="col-md-6">
+  
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Temperature-Min</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="minElement">- °C</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Temperature-Max</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="maxElement">- °C</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <p>Feels-Like</p>
+                        </div>
+                        <div class="col-2 offset-4">
+                          <p id="feelElement">- °C</p>
+                        </div>
+                      </div>
+  
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="card-footer">
+                  <p>API provider <b>openweathermap</b></p>
+                  <p><a href="https://openweathermap.org/">Visit openweathermap!</a></p>
+                </div>
+              </div>
+
+              <div>
+                <p>   </p>
+              </div>
+
+            </div>
+    </body>
+    <script src="app.js"></script>
+</html>

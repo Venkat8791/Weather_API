@@ -1,0 +1,39 @@
+.jumbotron{
+    background-image: url("weather.jpg");
+    background-position: 700px;
+    background-repeat: no-repeat;
+    background-color: aqua;
+}
+
+#searchBar{
+    margin: 20px;
+}
+
+#city{
+    border: 2px solid black;
+}
+
+.btn{
+    width: 100%;
+}
+
+.form-control{
+    width: 100%;
+}
+
+.notificationElement{
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.details{
+    border-bottom: 1px solid wheat;
+}
+
+
+
+.form-group{
+    display: flex;
+    align-items: center;
+}
+
